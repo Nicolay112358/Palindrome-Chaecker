@@ -1,0 +1,97 @@
+:root {
+    --background-color-main: #9296F0;
+    --text-color: #303030;
+    --main-color-button: #CB78FF;
+    --color-button-hover: #8133B5;
+    --input-text-color: #B9B9B9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--background-color-main);
+}
+
+.container {
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    border: 1px solid hsl(0, 0%, 0%);
+    border-radius: 15px;
+    width: 40%;
+    height: 650px;
+    background-image: linear-gradient(to left, #5504d6, #6336d3, #7052cd, #7e6ac6, #8c80bd, #8c80bd,
+    #8c80bd, #8c80bd, #7e6ac6, #7052cd, #6336d3, #5504d6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: var(--text-color);
+    font-size: 3rem;
+    padding: 40px 0px;
+}
+
+.input-container {
+    padding: 25px 0px;
+}
+
+#text-input {
+    width: 80%;
+    height: 40px;
+    font-size: 25px;
+    background-color: var(--input-text-color);
+    padding: 2px 13px;
+    border-radius: 15px;
+}
+
+.button-container {
+    padding: 20px 0;
+}
+
+#check-btn{
+    width: 50%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: var(--main-color-button);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+
+#check-btn:hover{
+    background-color: var(--color-button-hover);
+}
+
+#check-btn:active{
+    background-color: #3A0070;
+    color: white;
+}
+
+#result{
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.check-input {
+    font-size: 3rem;
+}
+
+p{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
