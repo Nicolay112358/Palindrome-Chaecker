@@ -11,6 +11,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: var(--background-color-main);
     display: flex;
@@ -63,7 +64,7 @@ h1{
     padding: 20px 0;
 }
 
-#check-btn, #clean-btn{
+#check-btn, #clear-btn{
     width: 60%;
     height: 50px;
     cursor: pointer;
@@ -74,16 +75,17 @@ h1{
     border: none;
 }
 
-#check-btn:hover, #clean-btn:hover{
+#check-btn:hover, #clear-btn:hover{
     background-color: var(--color-button-hover);
 }
 
-#check-btn:active, #clean-btn:active{
+#check-btn:active, #clear-btn:active{
     background-color: #3A0070;
     color: white;
 }
 
 #result{
+    visibility: hidden;
     padding: 25px 0px;
     display: flex;
     flex-direction: column;
