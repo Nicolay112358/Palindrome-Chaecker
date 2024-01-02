@@ -13,15 +13,17 @@
 }
 body {
     background-color: var(--background-color-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .container {
-    position: absolute;
-    left: 30%;
-    top: 10%;
     border: 1px solid hsl(0, 0%, 0%);
     border-radius: 15px;
-    width: 40%;
+    width: 35vw;
+    min-width: 350px;
     height: 650px;
     background-image: linear-gradient(to left, #5504d6, #6336d3, #7052cd, #7e6ac6, #8c80bd, #8c80bd,
     #8c80bd, #8c80bd, #7e6ac6, #7052cd, #6336d3, #5504d6);
@@ -38,12 +40,14 @@ form {
 
 h1{
     color: var(--text-color);
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 40px 0px;
+    margin: 0px 15px;
 }
 
 .input-container {
     padding: 25px 0px;
+    width: 100%;
 }
 
 #text-input {
@@ -59,8 +63,8 @@ h1{
     padding: 20px 0;
 }
 
-#check-btn{
-    width: 50%;
+#check-btn, #clean-btn{
+    width: 60%;
     height: 50px;
     cursor: pointer;
     border-radius: 50px;
@@ -70,11 +74,11 @@ h1{
     border: none;
 }
 
-#check-btn:hover{
+#check-btn:hover, #clean-btn:hover{
     background-color: var(--color-button-hover);
 }
 
-#check-btn:active{
+#check-btn:active, #clean-btn:active{
     background-color: #3A0070;
     color: white;
 }
