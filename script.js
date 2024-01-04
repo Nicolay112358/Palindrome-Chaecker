@@ -3,15 +3,25 @@ const checkBtn = document.getElementById("check-btn");
 const clearBtn = document.getElementById("clear-btn");
 const result = document.getElementById("result");
 const checkInput = document.querySelector(".check-input");
-const checkInputSecontStr = document.querySelector("#check-input-secont-str");
 
 checkBtn.addEventListener('click', () => {
+    
     let string = inputText.value;
+
     if (inputText.value) {
-        checkInput.textContent = `"${string}"`;
-        result.style.visibility = "visible"; 
+        
+        checkInput.textContent = `${string}`;
+        
         string = getString(string);
-        console.log(checkerPlindrome(string)); 
+        
+        if (checkerPlindrome(string)){
+            checkInput.innerHTML = `${string} <br> is a palindrome`;
+        } else {
+            checkInput.innerHTML = `${string} <br> is not a palindrome`;
+        }
+        
+        result.style.visibility = "visible"; 
+         
     } else {
         alert('Please input a value');
     }
@@ -20,8 +30,7 @@ checkBtn.addEventListener('click', () => {
 clearBtn.addEventListener('click', ()=> {
     inputText.value = '';
     result.style.visibility = "hidden";
-    checkInput.textContent = '';
-    checkInputSecontStr.textContent = '';
+    checkInput.innerHTML = '';
 });
 
 function getString(str){
@@ -30,11 +39,12 @@ function getString(str){
 };
 
 const checkerPlindrome = function (str) {
+    
     let index = Math.floor(str.length / 2);
     let ferstPart = str.slice(0, index);
     let secondPart = str.slice(-index).split('').reverse().join(''); 
-    console.log(ferstPart, secondPart);
-    if (ferstPart === secondPart) {
+    
+    if (str.length === 1|| ferstPart === secondPart) {
         return true; 
     } else {
         return false;
